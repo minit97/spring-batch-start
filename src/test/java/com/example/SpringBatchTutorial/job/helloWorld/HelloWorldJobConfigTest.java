@@ -13,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@SpringBatchTest
+@SpringBatchTest    // jobLauncherTestUtils
 @SpringBootTest(classes = {HelloWorldJobConfig.class, SpringBatchTestConfig.class})
 @RunWith(SpringRunner.class)
 @ActiveProfiles("test")

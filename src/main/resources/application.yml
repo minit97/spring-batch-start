@@ -12,6 +12,7 @@ spring:
   batch:
     job:
       name: ${job.name:None}
+      enabled: false
     jdbc:
       initialize-schema: always
   datasource:
