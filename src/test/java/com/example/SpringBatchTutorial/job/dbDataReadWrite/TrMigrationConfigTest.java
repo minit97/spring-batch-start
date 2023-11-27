@@ -14,6 +14,7 @@ import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.test.JobLauncherTestUtils;
 import org.springframework.batch.test.context.SpringBatchTest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -27,6 +28,7 @@ import java.util.Date;
 class TrMigrationConfigTest {
 
     @Autowired
+    @Qualifier("jobLauncherTestUtils")
     private JobLauncherTestUtils jobLauncherTestUtils;
     @Autowired
     private OrdersRepository ordersRepository;
