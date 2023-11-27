@@ -26,7 +26,7 @@ public class ConditionalStepJobConfig {
                                   @Qualifier("conditionalAllStep") Step allStep,
                                   @Qualifier("conditionalFailStep") Step failStep,
                                   @Qualifier("conditionalCompleteStep") Step completeStep) {
-        return new JobBuilder("multipleStepJob", jobRepository)
+        return new JobBuilder("conditionalStepJob", jobRepository)
                 .incrementer(new RunIdIncrementer())
                 .start(startStep)
                 .on("FAILED").to(failStep)
